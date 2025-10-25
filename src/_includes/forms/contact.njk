@@ -1,15 +1,14 @@
 <!-- Form -->
 <div>
     <!-- Hidden part -->
-    <form hidden name="contact" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+    <form hidden name="contact" data-netlify="true" netlify-honeypot="bot-field">
         <input name="name" />
         <input name="email" />
         <input name="message" />
-        <div data-netlify-recaptcha="true" />
     </form>
 
     <!-- Actual form -->
-    <form class="h-full pl-0.5" method="POST" id="contact" x-data="contactNewForm()" @submit.prevent="submitData()" x-cloak data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+    <form class="h-full pl-0.5" method="POST" id="contact" x-data="contactNewForm()" @submit.prevent="submitData()" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
         <!-- Setup (Related to netlify) -->
         <div>
             <!-- Honeypot for bots (is hidden) -->

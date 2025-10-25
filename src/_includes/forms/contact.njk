@@ -1,14 +1,15 @@
 <!-- Form -->
 <div>
     <!-- Hidden part -->
-    <form hidden name="contact" data-netlify="true" netlify-honeypot="bot-field">
+    <form hidden name="contact" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
         <input name="name" />
         <input name="email" />
         <input name="message" />
+        <div data-netlify-recaptcha="true" />
     </form>
 
     <!-- Actual form -->
-    <form class="h-full pl-0.5" method="POST" id="contact" x-data="contactNewForm()" @submit.prevent="submitData()" x-cloak>
+    <form class="h-full pl-0.5" method="POST" id="contact" x-data="contactNewForm()" @submit.prevent="submitData()" x-cloak data-netlify-recaptcha="true" netlify-honeypot="bot-field">
         <!-- Setup (Related to netlify) -->
         <div>
             <!-- Honeypot for bots (is hidden) -->
@@ -56,6 +57,11 @@
                         <textarea id="message" required class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal h-32" name="message" form="contact" x-model="message" placeholder="Your message here"></textarea>
                     </div>
                 </div>
+            </div>
+
+            <!-- reCAPTCHA -->
+            <div class="pt-2">
+               <div data-netlify-recaptcha="true"></div>
             </div>
 
             <!-- Button -->

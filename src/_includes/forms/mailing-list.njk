@@ -34,6 +34,22 @@
                 </div>
             </div>
 
+            <fieldset class="space-y-2">
+                <legend class="text-sm font-medium text-gray-700">
+                    Subscribe to
+                </legend>
+
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="topics[]" value="general" />
+                    <span>DSEV General</span>
+                </label>
+
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="topics[]" value="students" />
+                    <span>DSEV Students</span>
+                </label>
+            </fieldset>
+
             <!-- reCAPTCHA -->
             <div class="pt-2">
                <div data-netlify-recaptcha="true"></div>
@@ -97,7 +113,7 @@
             /* Submit data */
             submitData() {
                 let formElement = document.getElementById("mailing-list");
-                
+
                 // Get recaptcha token
                 const recaptchaInput = document.getElementById("g-recaptcha-response");
                 const token =

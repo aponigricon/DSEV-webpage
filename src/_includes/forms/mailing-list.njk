@@ -110,7 +110,7 @@
             submitData() {
                 let formElement = document.getElementById("mailing-list");
 
-                // Get recaptcha token
+                /*// Get recaptcha token
                 const recaptchaInput = document.getElementById("g-recaptcha-response");
                 const token =
                     (window.grecaptcha &&
@@ -142,9 +142,6 @@
 
                 /* Generate formdata element */
                 let body = new URLSearchParams(new FormData(formElement)).toString();
-
-
-                console.log("Submitting...");
 
                 /* Submit form */
                 return fetch("/", {

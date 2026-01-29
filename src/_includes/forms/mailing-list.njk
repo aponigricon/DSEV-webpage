@@ -92,6 +92,7 @@
 
     /* Contact form */
     function contactForm() {
+        console.log("Loading contact form...");
         /* Set data */
         return {
             loading: false,
@@ -110,6 +111,7 @@
 
             /* Submit data */
             submitData() {
+                console.log("Submitting data...");
                 /* Set loading and get form element */
                 this.loading = true;
                 let formElement = document.getElementById("mailing-list");

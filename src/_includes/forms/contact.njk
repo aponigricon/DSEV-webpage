@@ -61,7 +61,7 @@
             <!-- reCAPTCHA -->
             <div class="pt-2">
                <div data-netlify-recaptcha="true"></div>
-               <input id="g-recaptcha-response" name="g-recaptcha-response" required
+               <input id="g-recaptcha-response-contact" name="g-recaptcha-response" required
                     aria-hidden="true"
                     style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0; pointer-events:none" />
             </div>
@@ -109,7 +109,7 @@
             const formElement = document.getElementById("contact");
 
             // Get recaptcha token
-            const recaptchaInput = document.getElementById("g-recaptcha-response");
+            const recaptchaInput = document.getElementById("g-recaptcha-response-contact");
             const token =
                 (window.grecaptcha &&
                  grecaptcha.getResponse &&

@@ -8,7 +8,7 @@
     </form>
 
     <!-- Actual form -->
-    <form class="h-full pl-0.5" method="POST" id="contact" x-data="contactNewForm()" @submit.prevent="submitData()" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+    <form class="h-full pl-0.5" method="POST" id="contact" x-data="contactNewForm()" @submit.prevent="submitData()" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
         <!-- Setup (Related to netlify) -->
         <div>
             <!-- Honeypot for bots (is hidden) -->
@@ -60,7 +60,7 @@
 
             <!-- reCAPTCHA --
             <div class="pt-2">
-               <div data-netlify-recaptcha="true"></div>
+               <div></div>
                <input id="g-recaptcha-response-contact" name="g-recaptcha-response" required
                     aria-hidden="true"
                     style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0; pointer-events:none" />

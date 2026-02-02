@@ -108,7 +108,6 @@
 
             /* Submit data */
             submitData() {
-                console.log("Submitting data...");
                 /* Set loading and get form element */
                 this.loading = true;
                 let formElement = document.getElementById("mailing-list");
@@ -144,6 +143,8 @@
 
                 /* Generate formdata element */
                 let body = new URLSearchParams(new FormData(formElement)).toString();
+
+                console.log(body);
 
                 /* Submit form */
                 return fetch("/", {
